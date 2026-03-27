@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global News Globe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <h1>Global News Globe</h1>
+        <p>
+          Explore every country on a 3D Earth. Click a country or search by name
+          to open a news query focused on that location.
+        </p>
+
+        <label for="countrySearch">Country search</label>
+        <div class="search-row">
+          <input
+            id="countrySearch"
+            type="search"
+            placeholder="Type a country name (e.g., Japan)"
+            autocomplete="off"
+          />
+          <button id="searchBtn" type="button">Find</button>
+        </div>
+
+        <div class="selected">
+          <h2>Selected country</h2>
+          <p id="selectedCountry">None</p>
+          <button id="openNewsBtn" type="button" disabled>
+            Search news for selected country
+          </button>
+        </div>
+
+        <details>
+          <summary>How it works</summary>
+          <ul>
+            <li>Loads all country boundaries from a world GeoJSON dataset.</li>
+            <li>Projects boundaries as polygons on a 3D globe.</li>
+            <li>Country click/selection opens a news search in a new tab.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="globe-wrap">
+        <div id="globe"></div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/globe.gl"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

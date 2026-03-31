@@ -1,12 +1,29 @@
-- 👋 Hi, I’m @Lol0009-001
-- 👀 I’m interested in roller speed skating
-- 🌱 I’m currently learning Psychology and Philosophy
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me. IDK
-- 😄 Pronouns: He/She/It (just kidding, i'm a boy)
-- ⚡ Fun fact: 
+# Global News Globe
 
-<!---
-Lol0009-001/Lol0009-001 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Interactive 3D Earth visualization for world news discovery.
+
+## Features
+
+- Renders a 3D Earth model in the browser.
+- Loads country polygons for countries around the world from a GeoJSON dataset.
+- Click a country on the globe to select it.
+- Search a country by name and focus your news lookup.
+- Open a Google News search query for the selected country.
+
+## Run locally
+
+Because the app fetches GeoJSON data over HTTP, run it from a local server:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open:
+
+- <http://localhost:8080>
+
+## Files
+
+- `index.html` — UI shell and script loading.
+- `styles.css` — layout and visual design.
+- `app.js` — 3D globe rendering + country selection/search behavior.
